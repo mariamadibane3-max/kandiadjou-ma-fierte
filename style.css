@@ -1,0 +1,133 @@
+:root{
+  --foret:#123f2b;      /* feuillage de la Casamance */
+  --riz:#8fae3b;        /* rizières */
+  --or:#e3a82b;         /* arachide, mil, soleil */
+  --laterite:#a5442a;   /* terre rouge */
+  --bolong:#0e5a6b;     /* eau, bras de mer */
+  --fond:#f4f7ef;
+  --texte:#1c2a22;
+  --r:6px;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{font-family:Figtree,system-ui,sans-serif;color:var(--texte);background:var(--fond);line-height:1.65;font-size:1.05rem}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;line-height:1.15}
+a{color:inherit}
+img{max-width:100%;height:auto}
+:focus-visible{outline:3px solid var(--or);outline-offset:3px}
+
+/* Navigation */
+header{position:fixed;inset:0 0 auto 0;z-index:20;display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.8rem 5vw;background:rgba(18,63,43,.92);backdrop-filter:blur(6px)}
+.logo img{height:52px;width:auto;border-radius:6px;border:2px solid var(--or)}
+.logo{display:flex;align-items:center;gap:.7rem;font-family:Fraunces,serif;font-weight:800;color:#fff;text-decoration:none;font-size:1.2rem}
+nav ul{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:.4rem 1rem;list-style:none;padding:0}
+nav a{display:inline-block;color:#e8f0dc;text-decoration:none;font-size:.88rem;font-weight:500;transition:color .3s ease}
+nav a:hover{color:var(--or);animation:rotationMenu 3s ease-in-out}
+#menu{display:none;background:none;border:2px solid #fff;color:#fff;border-radius:var(--r);padding:.3rem .7rem;font-size:1rem;cursor:pointer}
+@keyframes rotationMenu{
+  0%{transform:rotate(-5deg)}
+  50%{transform:rotate(5deg)}
+  100%{transform:rotate(0deg)}
+}
+
+/* Accueil vidéo */
+.hero{position:relative;min-height:100vh;display:grid;place-items:center;text-align:center;color:#fff;overflow:hidden;background:linear-gradient(160deg,var(--foret),var(--bolong))}
+.hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(18,63,43,.85),rgba(18,63,43,.25))}
+.hero .texte{position:relative;z-index:1;padding:0 6vw;max-width:900px;animation:apparait .6s 2.4s ease both}
+.hero h1{font-size:clamp(2.4rem,7vw,5rem);font-weight:800;display:inline-block;cursor:default;transform-origin:center;
+  animation:entreTourne 1.6s 2.5s ease-out both, rebondTitre 2s 4.1s ease-in-out infinite}
+.hero p{font-size:1.25rem;margin:1.2rem auto 2rem;max-width:60ch}
+.btn{display:inline-block;background:var(--or);color:#1c1405;font-weight:700;padding:.85rem 1.8rem;border-radius:var(--r);text-decoration:none}
+.btn:hover{background:#f2bd4c;animation:tourne 5s ease-in-out}
+
+/* Sections */
+section{padding:5rem 6vw}
+section:nth-of-type(even){background:#e8eedc}
+.sombre{background:var(--foret)!important;color:#eef4e4}
+.sombre h2{color:var(--or)}
+.titre{max-width:70ch;margin-bottom:2.5rem}
+.titre h2{font-size:clamp(1.9rem,4vw,2.8rem);color:var(--foret);margin-bottom:.8rem;padding-left:1rem;border-left:6px solid var(--or)}
+.sombre .titre h2{color:#fff}
+.grille{display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.grille.trois{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.carte{background:#fff;border-radius:var(--r);overflow:hidden;border-bottom:5px solid var(--riz);transition:box-shadow .4s}
+.carte:nth-child(2n){border-color:var(--or)}
+.carte:nth-child(3n){border-color:var(--laterite)}
+.carte:nth-child(4n){border-color:var(--bolong)}
+.carte div.ph+*{margin-top:1rem}
+.carte h3{font-size:1.3rem;padding:0 1.2rem;color:var(--foret)}
+.carte p{padding:.4rem 1.2rem 1.4rem;font-size:.98rem}
+.sombre .carte{background:#1b5238;color:#eef4e4}
+.sombre .carte h3{color:var(--or)}
+
+/* Emplacement photo : l'image remplace le dégradé si elle existe */
+.ph{aspect-ratio:4/3;background:var(--img,none) center/cover,linear-gradient(135deg,var(--riz),var(--bolong))}
+.large .ph{aspect-ratio:16/9}
+
+/* Texte + image côte à côte */
+.duo{display:grid;gap:2.5rem;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));align-items:center}
+.duo .ph{border-radius:var(--r);transition:box-shadow .4s}
+.duo p+p{margin-top:1rem}
+blockquote{border-left:6px solid var(--or);padding-left:1rem;font-family:Fraunces,serif;font-size:1.3rem;margin-top:1.2rem}
+
+footer{background:#0b2b1d;color:#cfe0c4;text-align:center;padding:2.5rem 6vw;font-size:.95rem}
+footer strong{color:var(--or)}
+
+/* Survol : la carte fait un tour complet pendant 5 secondes */
+.carte:hover,.duo .ph:hover{animation:tourne 5s ease-in-out;box-shadow:0 14px 30px rgba(0,0,0,.25)}
+@keyframes tourne{
+  from{transform:perspective(900px) rotateY(0)}
+  to{transform:perspective(900px) rotateY(360deg)}
+}
+
+/* Survol des images (logo) */
+img{transition:transform .6s ease}
+img:hover{transform:scale(1.04)}
+
+/* Texte d'accueil : apparition douce après l'ouverture des rideaux */
+@keyframes apparait{from{opacity:0}}
+
+/* Titre : il tourne en entrant, puis rebondit doucement */
+@keyframes entreTourne{
+  from{transform:perspective(900px) rotateY(-180deg);opacity:0}
+  to{transform:perspective(900px) rotateY(0);opacity:1}
+}
+@keyframes rebondTitre{
+  0%,100%{transform:translateY(0) rotate(0deg)}
+  30%{transform:translateY(-15px) rotate(-3deg)}
+  60%{transform:translateY(5px) rotate(3deg)}
+}
+
+/* Phrase : chaque mot rebondit en entrant, puis rebondit 5 fois au survol.
+   « rebond » reste dans la liste au survol pour que le mot ne disparaisse pas. */
+.mot{display:inline-block;animation:rebond 1s ease-out both;animation-delay:calc(3s + var(--i) * .12s)}
+.mot:hover{animation:rebond 1s ease-out both, saute 1s ease-in-out 5;animation-delay:calc(3s + var(--i) * .12s), 0s}
+@keyframes rebond{
+  0%{transform:translateY(-70px);opacity:0}
+  40%{transform:translateY(0);opacity:1}
+  55%{transform:translateY(-24px)}
+  70%{transform:translateY(0)}
+  82%{transform:translateY(-9px)}
+  100%{transform:translateY(0)}}
+@keyframes saute{0%,100%{transform:translateY(0)}30%{transform:translateY(-20px)}50%{transform:translateY(0)}65%{transform:translateY(-9px)}80%{transform:translateY(0)}}
+
+/* Rideaux : ils s'ouvrent au chargement et découvrent le message de bienvenue */
+.rideau{position:absolute;top:0;bottom:0;width:50.5%;z-index:3;pointer-events:none;
+  background:repeating-linear-gradient(90deg,#6e1a1a 0,#9c2a2a 30px,#5a1414 60px)}
+.rideau.gauche{left:0;border-right:5px solid var(--or);animation:ouvreG 2.8s 1s cubic-bezier(.7,0,.3,1) forwards}
+.rideau.droit{right:0;border-left:5px solid var(--or);animation:ouvreD 2.8s 1s cubic-bezier(.7,0,.3,1) forwards}
+@keyframes ouvreG{to{transform:translateX(-102%)}}
+@keyframes ouvreD{to{transform:translateX(102%)}}
+
+/* Accessibilité : pas d'animations si l'utilisateur les désactive */
+@media (prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important}.rideau{display:none}}
+
+/* Téléphones (toujours en dernier pour l'emporter sur le reste) */
+@media (max-width:820px){
+  #menu{display:block}
+  nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--foret);padding:1rem 5vw}
+  nav.ouvert{display:block}
+  nav ul{flex-direction:column;justify-content:flex-start}
+  section{padding:3.5rem 6vw}
+}

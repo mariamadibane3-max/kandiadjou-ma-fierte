@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kandiadjou ma fierté</title>
+<link rel="icon" href="logo.jpg">
+<meta name="description" content="Site du village de Carrefour Diaroumé, en Casamance : histoire, culture, traditions, agriculture et vie quotidienne.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Figtree:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"></head>
+<body>
+<header>
+  <a class="logo" href="#accueil"><img src="logo.jpg" alt="Logo Kandiadjou ma fierté"><span>Kandiadjou ma fierté</span></a>
+  <button id="menu" aria-expanded="false" aria-controls="nav">Menu</button>
+  <nav id="nav" aria-label="Navigation principale">
+    <ul>
+      <li><a href="#histoire">Notre histoire</a></li>
+      <li><a href="#apropos">À propos</a></li>
+      <li><a href="#services">Nos services</a></li>
+      <li><a href="#navetane">Nos joueurs de Navétane</a></li>
+      <li><a href="#vainqueur">Le vainqueur de Navétane</a></li>
+      <li><a href="#village">Notre village</a></li>
+      <li><a href="#terre">Notre terre</a></li>
+      <li><a href="#pont">Notre pont</a></li>
+      <li><a href="#mairie">Notre mairie</a></li>
+      <li><a href="#transport">Nos moyens de transport</a></li>
+      <li><a href="#traditions">Nos traditions</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+<!-- ACCUEIL : dépose ta vidéo dans videos/accueil.mp4 -->
+<section class="hero" id="accueil" style="padding:0">
+  <video autoplay muted loop playsinline poster="mon_village.png" aria-hidden="true">
+    <source src="kdd.mp4" type="video/mp4">
+  </video>
+  <span class="rideau gauche"></span><span class="rideau droit"></span>
+  <div class="texte">
+    <h1>Bienvenue à Kandiadjou</h1>
+    <p>Là où il y a des hommes courageux, il y a derrière eux
+       des femmes battantes et des enfants bien élevés</p>
+    <a class="btn" href="#histoire">Découvrir notre village</a>
+  </div>
+</section>
+
+<!-- HISTOIRE -->
+<section id="histoire">
+  <div class="duo">
+    <div>
+      <div class="titre" style="margin-bottom:1rem"><h2>Notre histoire</h2></div>
+      <p>Kandiadjou est un village de la Casamance, au sud du Sénégal. Situé entre Carrefour et Diaroumé.
+         Son nom dit déjà beaucoup : c’est un lieu de passage et de rencontre, 
+         où se croisent les routes, les familles et les habitants des villages voisins.</p>
+      <p>Génération après génération, les habitants ont bâti ici une vie fondée sur le travail 
+        de la terre, l’entraide et le respect des anciens. Aujourd’hui, le village grandit
+         sans oublier ce qui l’a fait naître.</p>
+    </div>
+    <div class="ph large" style="--img:url('histoire.webp');aspect-ratio:4/3" role="img" aria-label="Vue ancienne et actuelle du village"></div>
+  </div>
+</section>
+
+<!-- À PROPOS : 4 cartes alignées -->
+<section id="apropos">
+  <div class="titre"><h2>À propos de nous</h2>
+    <p>Quatre piliers qui font l’identité de Kandiadjou.</p></div>
+  <div class="grille">
+    <article class="carte"><div class="ph" style="--img:url('culture.webp')">
+    </div><h3>Notre culture</h3>
+    <p>Chants, danses, fêtes et cérémonies rythment l’année et rassemblent petits
+       et grands autour des mêmes valeurs.</p>
+      </article>
+    <article class="carte">
+      <div class="ph" style="--img:url('tradition.jpg')"></div>
+      <h3>Nos traditions</h3>
+      <p>Transmises par les anciens, nos traditions guident les grandes étapes de la vie 
+        et gardent le village uni.</p>
+      </article>
+    <article class="carte"><div class="ph" style="--img:url('languages.webp')"></div>
+      <h3>Notre langue</h3><p>Nos langues sont le lien entre les générations. 
+        On les parle à la maison, au marché et pendant les fêtes.</p>
+      </article>
+  </div>
+</section>
+
+<!-- SERVICES : 4 cartes alignées -->
+<section id="services" class="sombre">
+  <div class="titre"><h2>Nos services</h2><p>Ce qui facilite la vie de chaque habitant, chaque jour.</p></div>
+  <div class="grille">
+    <article class="carte"><div class="ph" style="--img:url('hopital.jpg')"></div><h3>L’hôpital</h3><p>Il accueille les malades du village et des environs et veille sur la santé de toutes les familles.</p></article>
+    <article class="carte"><div class="ph" style="--img:url('ecole.jpg')"></div><h3>L’école</h3><p>Ici nos enfants apprennent, grandissent et préparent l’avenir de Carrefour Diaroumé.</p></article>
+    <article class="carte"><div class="ph" style="--img:url('marche.jpg')"></div><h3>Le marché</h3><p>Un lieu vivant où l’on vend les produits de la terre, où l’on discute et où l’on se retrouve.</p></article>
+    <article class="carte"><div class="ph" style="--img:url('station.jpeg')"></div><h3>La station</h3><p>Point de ravitaillement et de passage, elle garde le village relié aux routes de la région.</p></article>
+  </div>
+</section>
+
+<!-- NAVÉTANE -->
+<section id="navetane">
+  <div class="titre"><h2>Nos joueurs de Navétane</h2><p>Chaque saison, le football rassemble tout le village. Quatre équipes portent nos couleurs et enflamment le terrain.</p></div>
+  <div class="grille">
+    <article class="carte"><div class="ph" style="--img:url('Raza.jpg')"></div><h3>Raza</h3><p>Une équipe soutenue par ses supporters, connue pour son énergie sur le terrain.</p></article>
+    <article class="carte"><div class="ph" style="--img:url('Sabadell.jpg')"></div><h3>Sabadel</h3><p>Des joueurs unis qui se battent jusqu’au dernier coup de sifflet.</p></article>
+    <article class="carte"><div class="ph" style="--img:url('Elite.jpeg')"></div><h3>Élite</h3><p>Une équipe fière de son jeu et de son esprit de groupe.</p></article>
+    <article class="carte"><div class="ph" style="--img:url('Kambeng.jpeg')"></div><h3>Kambeng</h3><p>Une équipe qui fait vibrer les tribunes et défend les couleurs du quartier.</p></article>
+  </div>
+</section>
+
+<!-- VAINQUEUR DU NAVÉTANE -->
+<section id="vainqueur">
+  <div class="duo">
+    <div class="ph" style="--img:url('vainqueur.jpg');aspect-ratio:4/3" role="img" aria-label="L’équipe ASC Raza, vainqueur du navétane"></div>
+    <div>
+      <div class="titre" style="margin-bottom:1rem"><h2>Le vainqueur de Navétane : ASC Raza</h2></div>
+      <p>L’ASC Raza remporté le navétane. Cette victoire est la fierté des joueurs, de leurs supporters et de tout le village, qui a vibré derrière son équipe jusqu’au bout.</p>
+      <blockquote>Bravo à l’ASC Raza, notre champion !</blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- MOSQUÉE + VUE -->
+<section id="village">
+  <div class="titre"><h2>Notre village</h2>
+    <p>Le cœur spirituel de Kandiadjou et le paysage qui l’entoure.</p>
+  </div>
+  <div class="grille trois large" style="grid-template-columns:repeat(auto-fit,minmax(320px,1fr))">
+    <article class="carte"><div class="ph" style="--img:url('mosquee.png')"></div>
+      <h3>Notre mosquée</h3><p>Lieu de prière, de paix et de rassemblement, 
+        elle est au centre de la vie du village, surtout les jours de fête.</p></article>
+    <article class="carte"><div class="ph" style="--img:url('mon_village.png')"></div>
+      <h3>La vue du village</h3><p>Des maisons entourées d’arbres, des chemins de terre rouge
+         et la verdure de la Casamance à perte de vue.</p></article>
+  </div>
+</section>
+
+<!-- ÉLEVAGE + AGRICULTURE -->
+<section id="terre" class="sombre">
+  <div class="titre"><h2>Notre élevage</h2><p>Dans presque chaque cour, on élève des animaux : une richesse pour la famille et pour les grandes occasions.</p></div>
+  <div class="grille trois">
+    <article class="carte"><div class="ph" style="--img:url('mouton.png')"></div><h3>Les moutons</h3><p>Très présents au village, surtout au moment des fêtes religieuses.</p></article>
+    <article class="carte"><div class="ph" style="--img:url('poule.png')"></div><h3>Les poules</h3><p>Elles fournissent les œufs et la viande pour nourrir les familles.</p></article>
+    <article class="carte"><div class="ph" style="--img:url('chevre.png')"></div><h3>Les chèvres</h3><p>Robustes et précieuses, elles se débrouillent bien dans nos paysages.</p></article>
+  </div>
+  <div class="titre" style="margin-top:4rem"><h2>Notre agriculture</h2><p>La terre de Casamance est généreuse. Après les pluies, les champs et les rizières se remplissent de cultures.</p></div>
+  <div class="grille" style="grid-template-columns:repeat(auto-fit,minmax(180px,1fr))">
+    <article class="carte"><div class="ph" style="--img:url('arachide.png')"></div><h3>Arachide</h3><p>Culture de base, source de revenus.</p></article>
+    <article class="carte"><div class="ph" style="--img:url('mais.png')"></div><h3>Maïs</h3><p>Cultivé pour nourrir les familles.</p></article>
+    <article class="carte"><div class="ph" style="--img:url('rizz.png')"></div><h3>Riz</h3><p>Le grand plat de la Casamance, planté dans les rizières.</p></article>
+    <article class="carte"><div class="ph" style="--img:url('mil.webp')"></div><h3>Mil</h3><p>Une céréale solide pour les repas.</p></article>
+    <article class="carte"><div class="ph" style="--img:url('gombo.png')"></div><h3>Gombo</h3><p>Un légume incontournable de nos sauces.</p></article>
+  </div>
+</section>
+
+<!-- PONT -->
+<section id="pont">
+  <div class="duo">
+    <div class="ph" style="--img:url('pont.webp');aspect-ratio:4/3" role="img" aria-label="Le pont entre Kandiadjou et Diaroumé"></div>
+    <div>
+      <div class="titre" style="margin-bottom:1rem"><h2>Le pont entre Kandiadjou et Diaroumé</h2></div>
+      <p>Ce pont relie deux villages voisins et rapproche leurs habitants, leurs commerces et leurs familles. Sous lui, l’eau de la mer s’avance dans les terres et dessine un paysage que tout le monde admire.</p>
+      <blockquote>Un pont qui relie deux villages et un paysage à ne pas manquer.</blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- MAIRIE + TRANSPORT -->
+<section id="mairie" class="sombre">
+  <div class="titre"><h2>Notre mairie</h2><p>La mairie organise la vie publique et porte le développement de la commune. Elle est dirigée par M. le maire Malang Sény Faty.</p></div>
+  <div class="grille trois large" style="grid-template-columns:repeat(auto-fit,minmax(320px,1fr))">
+    <article class="carte"><div class="ph" style="--img:url('mairie.jpg')"></div><h3>La mairie</h3><p>Le lieu où se décident les projets pour le village et où les habitants viennent faire leurs démarches.</p></article>
+    <article class="carte"><div class="ph" style="--img:url('malang.jpg')"></div><h3>M. le maire Malang Sény Faty</h3><p>À la tête de la commune, il travaille avec les habitants pour faire avancer le village.</p></article>
+  </div>
+  <div class="titre" id="transport" style="margin-top:4rem"><h2>Nos moyens de transport</h2><p>Carrefour Diaroumé est un carrefour : ici, on voyage facilement.</p></div>
+  <div class="grille trois">
+    <article class="carte"><div class="ph" style="--img:url('car.webp')"></div><h3>Le car</h3><p>Pour les longs trajets vers les villes de la région.</p></article>
+    <article class="carte"><div class="ph" style="--img:url('moto.png')"></div><h3>La moto</h3><p>Rapide et pratique pour circuler d’un village à l’autre.</p></article>
+    <article class="carte"><div class="ph" style="--img:url('bus.png')"></div><h3>Le bus</h3><p>Un transport commun pour voyager ensemble à petit prix.</p></article>
+  </div>
+</section>
+
+<!-- TRADITIONS -->
+<section id="traditions">
+  <div class="titre"><h2>Nos traditions</h2><p>Ce que nous portons, ce que nous célébrons, ce que nous transmettons à nos enfants.</p></div>
+  <div class="grille trois">
+    <article class="carte"><div class="ph" style="--img:url('culture-img.jpg')"></div><h3>Le mode d’habillement</h3><p>Pagnes, boubous et tenues colorées : nos vêtements racontent nos fêtes et nos origines.</p></article>
+    <article class="carte"><div class="ph" style="--img:url('kankourang.jpg')"></div><h3>Le Kankourang</h3><p>Figure importante de nos traditions, il est lié aux grandes cérémonies et veille sur la communauté.</p></article>
+    <article class="carte"><div class="ph" style="--img:url('dieme.webp')"></div><h3>Le Diémé</h3><p>Une tradition qui rassemble la communauté et fait vivre l’héritage des anciens.</p></article>
+  </div>
+</section>
+</main>
+
+<footer>
+  <p><strong>Kandiadjou ma fierté</strong> – Casamance, Sénégal</p>
+  <p>Un village qui vous accueille toujours les bras ouverts.</p>
+  <p style="margin-top:.8rem;font-size:.85rem">© <span id="annee"></span> Kandiadjou ma fierté. Tous droits réservés.</p>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav'), btn = document.getElementById('menu');
+  btn.addEventListener('click', () => {
+    const ouvert = nav.classList.toggle('ouvert');
+    btn.setAttribute('aria-expanded', ouvert);
+  });
+  nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    nav.classList.remove('ouvert'); btn.setAttribute('aria-expanded', false);
+  }));
+  document.querySelectorAll('.hero p').forEach(p => {
+    const mots = p.textContent.trim().split(/\s+/);
+    p.textContent = '';
+    mots.forEach((m, i) => {
+      const s = document.createElement('span');
+      s.className = 'mot'; s.style.setProperty('--i', i); s.textContent = m;
+      p.append(s);
+      if (i < mots.length - 1) p.append(' ');
+    });
+  });
+  document.getElementById('annee').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
